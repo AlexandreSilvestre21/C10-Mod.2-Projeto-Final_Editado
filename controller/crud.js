@@ -33,7 +33,7 @@ res.redirect("/")})
  
 //render detalhe
 
-router.get("/detalhes/:id", async function (req, res){
+router.get("/detalhes/:id", async(req, res) =>{
   const jogo = await Jogos.findByPk(req.params.id);
   res.render("detalhes",{jogo:jogo})
 
