@@ -29,24 +29,21 @@
             </div>
             <br>
             <div class="inputC">
-                <p class="question">Genero</p>
+                <p class= "question">Genero</p>
+                <label for="genero"></label>
+                    <select name="genero"> 
+                        <option value="<%= jogo.genero %>" selected><%=jogo.genero %></option>
+                        <option value="Ação">Ação</option>
+                        <option value="FPS">FPS(Tiro em primeira pessoa)</option>
+                        <option value="Card Game">Card Game</option>
+                        <option value="MOBA">MOBA</option>
+                        <option value="RPG">RPG</option>
+                        <option value="Simulador">Simulador</option>
+                        <option value="Corrida">Corrida</option>
 
-                <select id="gen" name="genero">
-                    <label for="genero"></label>
-                                <select name="genero">  
-                                    <option value="<%= jogo.genero %>" selected><%=jogo.genero %></option>
-                                    <option value="Ação">Ação</option>
-                                    <option value="FPS">FPS(Tiro em primeira pessoa)</option>
-                                    <option value="Card Game">Card Game</option>
-                                    <option value="MOBA">MOBA</option>
-                                    <option value="RPG">RPG</option>
-                                    <option value="Simulador">Simulador</option>
-                                    <option value="Corrida">Corrida</option>
-
-                                </select>
                     </select>
-                <br>
-                <br>
+                                        <br>
+             <br>
                 <p><b>Imagem utilizada </b></p>
                 <div class="inputC">
                     <p class="question">Imagem Url</p>
