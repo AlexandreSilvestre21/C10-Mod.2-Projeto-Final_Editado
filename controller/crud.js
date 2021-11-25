@@ -65,7 +65,7 @@ router.post('/deletar/deletar/:id', async (req,res) => {
 
   await jogo.destroy();
   const jogosList = await Jogos.findAll();
-  res.render("index", {mensagem: `Jogo deletado com sucesso!`,  jogo:jogosList});
+  res.render("index", {mensagem: `Jogo deletado com sucesso!`,  jogos:jogosList});
 });
 
 
