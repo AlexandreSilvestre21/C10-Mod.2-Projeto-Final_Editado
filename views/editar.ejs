@@ -32,15 +32,6 @@
                 <p class="question">Genero</p>
 
                 <select id="gen" name="genero">
-                    <%
-                    var options = [ "Ação", "FPS", "Card Game", "MOBA", "RPG", " "Simulador", "Corrida"];
-                        for ( var i = 0; i < options.length; i++ ){
-                            if (jogo.genero===options[i]) { %>
-                                <option value="<%=options[ i ] %>" selected><%=options[i] %></option>
-                            <%} else{%>
-                                <option value="<%=options[ i ] %>" ><%=options[i] %></option>
-                            <%}                    
-                    }%>
                     </select>
                 <br>
                 <br>
@@ -53,13 +44,13 @@
 
                 <div>
                 <p><b>Imagem utilizada </b></p>
-                <img src="<%=jogos.imagem%>" height="300" width="250" class="img-file" alt="<% jogos.nome %>">
+                <img src="<%=jogo.imagem%>" height="300" width="250" class="img-file" alt="<% jogo.nome %>">
                 </div>
                 <br>
                 <div class="inputC">
                     <p class="question">Descrição</p>
                     <label for="descritivo"></label class="labelinput">
-                    <input type="text" name="descritivo" id="input_descritivo" required value = "<%=jogos.descritivo%>">
+                    <input type="text" name="descritivo" id="input_descritivo" required value = "<%=jogo.descritivo%>">
                 </div>           
                 <button class="botao" type="submit">Editar</button>
                 <br>
