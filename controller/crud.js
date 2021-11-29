@@ -11,13 +11,13 @@ router.get("/",  async (req, res) => {
   res.render("index", {mensagem,jogos});
 });
 
-// cadastro
+// Cadastro Novo jogo
 
 router.get("/cadastro", (req, res) => {
   res.render("cadastro");
 });
 
-// cadastro do render
+// Cadastro - Render
 
 router.post("/cadastro", async (req, res) => {
 
@@ -31,7 +31,7 @@ router.post("/cadastro", async (req, res) => {
   mensagem = `O Jogo ${nome} foi adicionado`
 res.redirect("/")})
  
-//render detalhe
+// Render - Detalhe
 
 router.get("/detalhes/:id", async(req, res) =>{
   const jogo = await Jogos.findByPk(req.params.id);
@@ -39,7 +39,7 @@ router.get("/detalhes/:id", async(req, res) =>{
 
 });
 
-// deletar do render
+// Deletar Jogo do Render
 
 router.get("/deletar/:id", async (req, res) => {
   const jogo = await Jogos.findByPk(req.params.id);
@@ -55,7 +55,7 @@ router.get("/deletar/:id", async (req, res) => {
   });
 });
 
-// render delete
+// render Deletar
 
 router.post('/deletar/deletar/:id', async (req,res) => {
   const jogo = await Jogos.findByPk(req.params.id);
@@ -68,8 +68,7 @@ router.post('/deletar/deletar/:id', async (req,res) => {
   res.render("index", {mensagem: `Jogo deletado com sucesso!`,  jogos:jogosList});
 });
 
-
-// editar do render
+// Editar Jogo do Render
 
 router.get('/editar/:id', async (req,res) => {
   const jogo = await Jogos.findByPk(req.params.id);
@@ -84,8 +83,6 @@ router.get('/editar/:id', async (req,res) => {
   res.render("editar", {jogo:jogo});
 });
 
-
-// editar no render 
 
 router.post("/editar/:id", async function (req,res){
     const jogo = await Jogos.findByPk(req.params.id);

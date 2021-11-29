@@ -13,7 +13,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }))
 
-// rota do crud
+// rota para o crud
 app.use("/", crud);
 
 db.conectado();
